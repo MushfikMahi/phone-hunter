@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- daisi ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--  -->
+</head>
+
+<body>
+    <header></header>
+    <main class="container mx-auto">
+        <!-- search box -->
+        <section>
+            <input id="search-field" type="text" placeholder="search" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleSearch()" class="btn btn-accent">Search</button>
+        </section>
+        <!-- phones card -->
+        <section>
+            <!-- spinner or loader -->
+            <div id="laoding-spinner" class="text-center hidden">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+            </div>
+        </section>
+        <section id="show-all" class="hidden text-center my-8">
+            <button id="show-more" onclick="handleShowAll()" class="btn btn-accent">Show More</button>
+        </section>
+        <!-- modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="show_details_modal.showModal()">Show Details</button> -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="show-detail-modal-container">
+                    
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <footer></footer>
+    <script src="phone.js"></script>
+</body>
+
+</html>
